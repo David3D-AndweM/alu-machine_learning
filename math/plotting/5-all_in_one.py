@@ -25,11 +25,9 @@ y32 = np.exp((r3 / t32) * x3)
 np.random.seed(5)
 student_grades = np.random.normal(68, 15, 50)
 
-# Create figure with subplots
 fig = plt.figure(figsize=(12, 8))
 fig.suptitle('All in One', fontsize='x-small')
 
-# Plot 1: Line graph (top left)
 ax1 = plt.subplot(3, 2, 1)
 ax1.plot(range(len(y0)), y0, 'r-')
 ax1.set_xlim(0, 10)
@@ -37,14 +35,12 @@ ax1.set_title('Line Graph', fontsize='x-small')
 ax1.set_xlabel('x', fontsize='x-small')
 ax1.set_ylabel('y', fontsize='x-small')
 
-# Plot 2: Scatter plot (top right)
 ax2 = plt.subplot(3, 2, 2)
 ax2.scatter(x1, y1, c='magenta')
 ax2.set_title('Men\'s Height vs Weight', fontsize='x-small')
 ax2.set_xlabel('Height (in)', fontsize='x-small')
 ax2.set_ylabel('Weight (lbs)', fontsize='x-small')
 
-# Plot 3: Exponential decay with log scale (middle left)
 ax3 = plt.subplot(3, 2, 3)
 ax3.plot(x2, y2)
 ax3.set_yscale('log')
@@ -53,7 +49,6 @@ ax3.set_title('Exponential Decay of C-14', fontsize='x-small')
 ax3.set_xlabel('Time (years)', fontsize='x-small')
 ax3.set_ylabel('Fraction Remaining', fontsize='x-small')
 
-# Plot 4: Two exponential decay lines (middle right)
 ax4 = plt.subplot(3, 2, 4)
 ax4.plot(x3, y31, 'r--', label='C-14')
 ax4.plot(x3, y32, 'g-', label='Ra-226')
@@ -64,13 +59,11 @@ ax4.set_xlabel('Time (years)', fontsize='x-small')
 ax4.set_ylabel('Fraction Remaining', fontsize='x-small')
 ax4.legend(loc='upper right', fontsize='x-small')
 
-# Plot 5: Histogram (bottom, spanning two columns)
 ax5 = plt.subplot(3, 2, (5, 6))
 ax5.hist(student_grades, bins=range(0, 101, 10), edgecolor='black')
 ax5.set_title('Project A', fontsize='x-small')
 ax5.set_xlabel('Grades', fontsize='x-small')
 ax5.set_ylabel('Number of Students', fontsize='x-small')
 
-# Adjust layout to prevent overlap
 plt.tight_layout()
 plt.show()
