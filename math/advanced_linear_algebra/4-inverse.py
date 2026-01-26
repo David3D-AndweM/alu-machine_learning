@@ -2,6 +2,7 @@
 
 
 def inverse(matrix):
+    """Calculates the inverse of a matrix"""
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a list of lists")
     
@@ -38,6 +39,7 @@ def inverse(matrix):
 
 
 def adjugate(matrix):
+    """Calculates the adjugate matrix of a matrix"""
     n = len(matrix)
     
     if n == 1:
@@ -73,6 +75,7 @@ def adjugate(matrix):
 
 
 def determinant(matrix):
+    """Calculates the determinant of a matrix"""
     if len(matrix) == 0:
         return 1
     

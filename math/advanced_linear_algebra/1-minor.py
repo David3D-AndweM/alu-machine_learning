@@ -2,6 +2,7 @@
 
 
 def minor(matrix):
+    """Calculates the minor matrix of a matrix"""
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a list of lists")
     
@@ -42,6 +43,7 @@ def minor(matrix):
 
 
 def determinant(matrix):
+    """Calculates the determinant of a matrix"""
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a list of lists")
     
